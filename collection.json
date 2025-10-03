@@ -1,0 +1,75 @@
+{
+  "info": {
+    "name": "Fullstack Advanced - Sakura Shop",
+    "_postman_id": "abcd1234-5678-90ef-ghij-klmnopqrstuv",
+    "description": "Postman collection for testing the Fullstack Advanced backend (Products + Cart APIs)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["api", "products"]
+        }
+      }
+    },
+    {
+      "name": "Get Product by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/api/products/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["api", "products", "1"]
+        }
+      }
+    },
+    {
+      "name": "Add to Cart",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productId\": 1,\n  \"quantity\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/api/cart",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["api", "cart"]
+        }
+      }
+    },
+    {
+      "name": "Get Cart",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/api/cart",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["api", "cart"]
+        }
+      }
+    }
+  ]
+}
